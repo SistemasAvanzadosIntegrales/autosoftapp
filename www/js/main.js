@@ -574,7 +574,7 @@ function apariencia(name_logo){
 	
 	var fileTransfer = new FileTransfer();
 	var uri = encodeURI(ruta_generica+"/img/company/"+name_logo);
-	var fileURL = '/sdcard/Download/'+name_logo;
+	var fileURL = '/Download/'+name_logo;
 	
 	alert(uri);
 	alert('0');
@@ -585,9 +585,10 @@ function apariencia(name_logo){
 		function(entry) {
 			alert('1');
 			alert("download complete: " + entry.toURL());
-			$('#logo').attr("src",entry.toURL()+"/"+name_logo);
-			
-			//alert(entry.toURL());
+			alert($('#logo').attr(src));
+			$('#logo').attr("src",entry.toURL());
+			alert($('#logo').attr(src));
+			alert("ok");
 		},
 		function(error) {
 			console.log('2');
