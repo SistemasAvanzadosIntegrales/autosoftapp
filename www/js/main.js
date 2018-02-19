@@ -574,18 +574,18 @@ function apariencia(name_logo){
 	
 	var fileTransfer = new FileTransfer();
 	var uri = ruta_generica+"/img/company/"+name_logo;
-	var fileURL = "///storage/emulated/0/DCIM/myFile";
+	//var fileURL = "///storage/emulated/0/DCIM/myFile";
 	
 	alert(uri);
 	alert('0');
 		
 	fileTransfer.download(
 		uri,
-		fileURL,
+		null,
 		function(entry) {
 			alert('1');
 			alert("download complete: " + entry.toURL());
-			$('#logo').attr("src",entry.toURL()+name_logo);
+			$('#logo').attr("src",entry.toURL()+"/"+name_logo);
 			
 			//alert(entry.toURL());
 		},
