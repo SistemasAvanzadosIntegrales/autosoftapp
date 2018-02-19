@@ -574,7 +574,7 @@ function apariencia(name_logo){
 	
 	var fileTransfer = new FileTransfer();
 	var uri = encodeURI(ruta_generica+"/img/company/"+name_logo);
-	var fileURL = '/scard/Download/'+name_logo;
+	var fileURL = '/sdcard/Download/'+name_logo;
 	
 	alert(uri);
 	alert('0');
@@ -585,10 +585,9 @@ function apariencia(name_logo){
 		function(entry) {
 			alert('1');
 			alert("download complete: " + entry.toURL());
-			alert($('#logo').attr(src));
 			$('#logo').attr("src",entry.toURL());
-			alert($('#logo').attr(src));
-			alert("ok");
+			alert($('#logo').attr("src");
+			//alert(entry.toURL());
 		},
 		function(error) {
 			console.log('2');
@@ -625,22 +624,15 @@ function get_logo(){
 			var name_logo = JSON.stringify(resp.name_logo['logo']).replace(/['"]+/g, '');
 			var img = new Image();
 		    
-			img.src = "/scard/Download/"+name_logo;
+			img.src = 'img/'+name_logo;
 			
 			//Descargar imagen
-		    if(img.height == false){
-				alert("apariencia");
+		    if(img.height == false)
 				apariencia(name_logo);
-			}
-			else{
-				alert("agregar imagen");
-				alert($('#logo').attr(src));
-								
-				$('#logo').attr("src","/scard/Download/"+name_logo);
-				alert($('#logo').attr(src));
-			}
-						
 			
+			alert("mostrar imagen1");
+			//Mostrar imagen
+			$('#logo').attr("src","storage/emulated/0/path/to/file"+name_logo);
 			
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
