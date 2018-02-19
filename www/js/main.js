@@ -584,7 +584,8 @@ function apariencia(name_logo){
 		fileURL,
 		function(entry) {
 			alert('1');
-			console.log("download complete: " + entry.toURL());
+			alert("download complete: " + entry.toURL());
+			
 			//alert(entry.toURL());
 		},
 		function(error) {
