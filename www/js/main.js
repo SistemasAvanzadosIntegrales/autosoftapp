@@ -586,7 +586,7 @@ function apariencia(name_logo){
 			alert('1');
 			alert("download complete: " + entry.toURL());
 			$('#logo').attr("src",entry.toURL());
-			alert($('#logo').attr("src");
+			//alert($('#logo').attr("src");
 			//alert(entry.toURL());
 		},
 		function(error) {
@@ -624,7 +624,7 @@ function get_logo(){
 			var name_logo = JSON.stringify(resp.name_logo['logo']).replace(/['"]+/g, '');
 			var img = new Image();
 		    
-			img.src = 'img/'+name_logo;
+			img.src = '/sdcard/Download/'+name_logo;
 			
 			//Descargar imagen
 		    if(img.height == false)
@@ -632,7 +632,7 @@ function get_logo(){
 			
 			alert("mostrar imagen1");
 			//Mostrar imagen
-			$('#logo').attr("src","storage/emulated/0/path/to/file"+name_logo);
+			$('#logo').attr("src",'/sdcard/Download/'+name_logo);
 			
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
