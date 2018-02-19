@@ -572,7 +572,7 @@ function eliminar_vehiculo(id){
  **/
 function apariencia(name_logo){
 	
-	var fileTransfer = new FileTransfer();
+	/*var fileTransfer = new FileTransfer();
 	var uri = ruta_generica+"/img/company/"+name_logo;
 	//var fileURL = "///storage/emulated/0/DCIM/myFile";
 	
@@ -601,7 +601,32 @@ function apariencia(name_logo){
 				"Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
 			}
 		}
-	);
+	);*/
+	
+	
+	var url = ruta_generica+"/img/company/"+name_logo;
+    var filePath = 'local/path/to/your/file';
+    var fileTransfer = new FileTransfer();
+    var uri = encodeURI(url);
+
+    fileTransfer.download(
+        uri,
+        filePath,
+        function(entry) {
+            alert("download complete: " + entry.fullPath);
+        },
+        function(error) {
+            console.log("download error source " + error.source);
+            console.log("download error target " + error.target);
+            console.log("upload error code" + error.code);
+        },
+        false,
+        {
+            headers: {
+                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+            }
+        }
+    );
 }
 
 /**
