@@ -7,8 +7,8 @@
  * @Description: Libreria para app de Autosoft.
  **/
 //var rutaV1 = "http://admin.lealtadprimero.com.mx/servicio/index.php";
-var ruta_generica = "http://autosoft2.avansys.com.mx"; 
-//var ruta_generica = "http://localhost:8000";
+//var ruta_generica = "http://autosoft2.avansys.com.mx"; 
+var ruta_generica = "http://localhost:8000";
 //var ruta_generica = "http://172.16.0.15:8000"; 
 
 /**
@@ -614,7 +614,7 @@ function get_logo(){
     $.ajax({
         url: ruta_generica+"/api/v1/get_logo",
         type: 'POST',
-        dataType: 'JSON',
+        dataType: 'JSON', 
         data: {
             token:  token
         },
