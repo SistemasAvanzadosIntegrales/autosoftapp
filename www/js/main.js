@@ -8,7 +8,7 @@
  **/
 //var rutaV1 = "http://admin.lealtadprimero.com.mx/servicio/index.php";
 //var ruta_generica = "http://10.0.0.4:8000"; 
-var ruta_generica = "http://localhost:8000";
+//var ruta_generica = "http://localhost:8000";
 //var ruta_generica = "http://172.16.0.15:8000"; 
 
 /**
