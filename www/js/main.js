@@ -574,7 +574,7 @@ function apariencia(name_logo){
 	
 	var fileTransfer = new FileTransfer();
 	var uri = ruta_generica+"/img/company/"+name_logo;
-	var fileURL = "/storage/emulated/0/path/to/file";
+	var fileURL = "storage/emulated/0/path/to/file";
 	
 	alert(uri);
 	alert('0');
@@ -629,8 +629,9 @@ function get_logo(){
 		    if(img.height == false)
 				apariencia(name_logo);
 			
+			alert("mostrar imagen1");
 			//Mostrar imagen
-			$('#logo').attr("src",name_logo);
+			$('#logo').attr("src","storage/emulated/0/path/to/file"+name_logo);
 			
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
