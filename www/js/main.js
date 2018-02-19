@@ -574,7 +574,7 @@ function apariencia(name_logo){
 	
 	var fileTransfer = new FileTransfer();
 	var uri = ruta_generica+"/img/company/"+name_logo;
-	var fileURL = "img/";
+	var fileURL = "///storage/emulated/0/DCIM/myFile";
 	
 	alert(uri);
 	alert('0');
@@ -585,7 +585,7 @@ function apariencia(name_logo){
 		function(entry) {
 			alert('1');
 			alert("download complete: " + entry.toURL());
-			$('#logo').attr("src",entry.toURL()+"/"+name_logo);
+			$('#logo').attr("src",entry.toURL()+name_logo);
 			
 			//alert(entry.toURL());
 		},
