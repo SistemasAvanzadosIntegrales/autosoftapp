@@ -576,15 +576,15 @@ function apariencia(name_logo){
 	var uri = encodeURI(ruta_generica+"/img/company/"+name_logo);
 	var fileURL = '/sdcard/Download/'+name_logo;
 	
-	alert(uri);
-	alert('0');
+	//alert(uri);
+	//alert('0');
 		
 	fileTransfer.download(
 		uri,
 		fileURL,
 		function(entry) {
-			alert('1');
-			alert("download complete: " + entry.toURL());
+			//alert('1');
+			//alert("download complete: " + entry.toURL());
 			$('#logo').attr("src",entry.toURL());
 			//alert($('#logo').attr("src");
 			//alert(entry.toURL());
@@ -627,12 +627,9 @@ function get_logo(){
 			img.src = '/sdcard/Download/'+name_logo;
 			
 			//Descargar imagen
-		    if(img.height != false)
+		    if(img.height == false)
 				apariencia(name_logo);
-			else
-				alert("no");
-			
-			alert("mostrar imagen1");
+				
 			//Mostrar imagen
 			$('#logo').attr("src",'/sdcard/Download/'+name_logo);
 			
