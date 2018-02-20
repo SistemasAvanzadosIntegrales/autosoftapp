@@ -629,6 +629,8 @@ function get_logo(){
 			//Descargar imagen
 		    if(img.height == false)
 				apariencia(name_logo);
+			else
+				alert("no");
 			
 			alert("mostrar imagen1");
 			//Mostrar imagen
