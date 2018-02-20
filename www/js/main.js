@@ -627,7 +627,7 @@ function get_logo(){
 			img.src = '/sdcard/Download/'+name_logo;
 			
 			//Descargar imagen
-		    if(img.height == false)
+		    if(img.height != false)
 				apariencia(name_logo);
 			else
 				alert("no");
